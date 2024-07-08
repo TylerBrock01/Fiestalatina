@@ -89,5 +89,5 @@ export function dev() {
     watch('src/js/**/*.js', js);
     watch('src/js/**/*.{png,jpg}', imagenes);
 }
-
+// default
 export default series(crop,js, css,imagenes, dev);
