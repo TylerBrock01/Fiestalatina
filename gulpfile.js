@@ -7,16 +7,16 @@ import gulpSass from 'gulp-sass';
 import sourcemaps from 'gulp-sourcemaps';
 import terser from 'gulp-terser';
 import sharp from "sharp";
-
+//incio de funciones
 const sass = gulpSass(dartSass);
-
+//
 export function js(done) {
     src('src/js/app.js')
         .pipe(terser())
         .pipe(dest('build/js'));
     done();
 }
-
+//
 export function css(done) {
     src('src/scss/app.scss')
         .pipe(sourcemaps.init()) // Asegúrate de invocar sourcemaps.init()
@@ -24,7 +24,7 @@ export function css(done) {
             outputStyle: 'compressed'
         }).on('error', sass.logError))
         .pipe(sourcemaps.write('.')) // Asegúrate de invocar sourcemaps.write()
-        .pipe(dest('build/css'));
+        .pipe(dest('build/requisitos'));
     done();
 }
 // default crop:

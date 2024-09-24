@@ -90,7 +90,6 @@ function resaltarenlace() {
         })
     })
 }
-
 function scrollNav() {
     const navlinks = document.querySelectorAll('.navegacion-principal a');
 
